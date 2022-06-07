@@ -15,10 +15,10 @@ public class Test3 extends Base{
         WebElement signInHeading = driver.findElement(By.xpath("//header[@role='presentation']/h1"));
         System.out.println(signInHeading.getText().equals("Sign in") ? "PASSED" : "FAILED");
 
-        WebElement emailBox = driver.findElement(By.xpath("//div[@class='sds-input-container']"));
+        WebElement emailBox = driver.findElement(By.xpath("//input[@class='sds-text-field']"));
 
         emailBox.sendKeys("johnDoe@gmail.com");
-        WebElement passwordBox = driver.findElement(By.name("user[password]"));
+        WebElement passwordBox = driver.findElement(By.xpath("//input[@class='sds-text-field']"));
         passwordBox.sendKeys("1234");
         WebElement signInButton2 = driver.findElement(By.xpath("//button[@class='sds-button']"));
         signInButton2.click();
